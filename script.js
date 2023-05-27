@@ -8,17 +8,18 @@ function rollDice(){
     return n+1;
 }
 
-var p1 = rollDice();
-var p2 = rollDice();
+do{
+    var p1 = rollDice();
+    var p2 = rollDice();
+} while (p1 == p2);
 
-if (p1 > p2){
+if(p1 > p2){
     h1.textContent = "P1 WINS!";
 }
-else{
+else if (p1 < p2){
     h1.textContent = "P2 WINS!";
 }
 
+
 img1.setAttribute("src", "images/dice" + p1 + ".png");
 img2.setAttribute("src", "images/dice" + p2 + ".png");
-console.log(p1);
-console.log(p2);
